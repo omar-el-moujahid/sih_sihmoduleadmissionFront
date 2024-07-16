@@ -14,27 +14,27 @@ export default function Navbar() {
         );
     };
     return (
-        <header>
+        <header >
             <Link to={'/'} className={'nav-link'}>
                 <div className={" ms-5"}>
                     <img src={logo} alt="logo" width={'120px'} className="App-logo "/>
                 </div>
             </Link>
             <nav ref={navRef}>
-                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: ' #0092ca'}}>
+                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: 'whitesmoke' , fontSize:"x-large" ,fontWeight:'bold'}}>
                     Home
                 </Link>
-                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: ' #0092ca'}}>
-                    Knew About AS
+                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: 'whitesmoke' , fontSize:"x-large" ,fontWeight:'bold'}}>
+                     About US
                 </Link>
-                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: ' #0092ca'}}>
+                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: 'whitesmoke' , fontSize:"x-large" ,fontWeight:'bold'}}>
                     Our Services
                 </Link>
-                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: ' #0092ca'}}>
+                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: 'whitesmoke' , fontSize:"x-large" ,fontWeight:'bold'}}>
                     Our Services
                 </Link>
-                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: ' #0092ca'}}>
-                    Our Services
+                <Link to={'/'} className={'nav-link text-decoration-none'} style={{color: 'whitesmoke' , fontSize:"x-large" ,fontWeight:'bold'}}>
+                   Contact
                 </Link>
 
                 <button

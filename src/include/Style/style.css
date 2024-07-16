@@ -15,13 +15,16 @@
 }
 
 header {
+    z-index: 100; /* Ensure a high z-index value */
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
     padding: 0 2rem;
-    background-color: transparent;
+    background-color:transparent;
     color: var(--textColor);
+    position: fixed;
+    width: 100%;
 }
 
 nav a {

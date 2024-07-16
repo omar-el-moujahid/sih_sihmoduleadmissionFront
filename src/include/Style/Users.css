@@ -1,0 +1,22 @@
+/* src/include/Style/LoginSections.css */
+.containercss{
+    padding: 4rem;
+    min-height: 50vh;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
