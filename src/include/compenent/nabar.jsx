@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from 'react'
 import { faBars ,faTimes} from '@fortawesome/free-solid-svg-icons'
 import "../Style/style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,14 +7,33 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     const navRef = useRef();
-
+    const bgcheader = useRef();
+    const [bgColor, setBgColor] = useState('transparent');
     const showNavbar = () => {
         navRef.current.classList.toggle(
             "responsive_nav"
         );
     };
+
+    const handleScroll = () => {
+        if (window.scrollY > 10) {
+            bgcheader.current.classList.add("bgcheader"); ;
+            // setBgColor('#29335c'); // Change to your desired background color
+        } else {
+            bgcheader.current.classList.remove("bgcheader"); ;
+            // setBgColor("#29335c");
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header >
+        <header ref={bgcheader} >
             <Link to={'/'} className={'nav-link'}>
                 <div className={" ms-5"}>
                     <img src={logo} alt="logo" width={'120px'} className="App-logo "/>

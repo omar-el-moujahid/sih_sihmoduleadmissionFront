@@ -26,7 +26,9 @@ header {
     position: fixed;
     width: 100%;
 }
-
+.bgcheader{
+    background-color: var(--mainColor);
+}
 nav a {
     margin: 0 1rem;
     color: var(--textColor);
@@ -89,4 +91,10 @@ nav {
     nav a {
         font-size: 1.5rem;
     }
+}
+.card-titlecss{
+    color: #2c3e50;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
