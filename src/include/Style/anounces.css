@@ -1,0 +1,52 @@
+.special-heading {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 25px;
+}
+.special-heading h5 {
+    font-size: 14px;
+}
+.special-heading h5, .special-heading h6 {
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.special-heading h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    width: 120px;
+}
+
+.special-heading h5, .special-heading h6 {
+    border-bottom: 2px solid #4a90e2;
+    display: inline-block;
+    padding: 0 0 7px;
+    margin: 0 0 -2px;
+}
+
+.main-box{
+        background: #fff;
+        border: 1px solid rgba(225, 225, 225, .6);
+        border-radius: 4px;
+        margin: 15px 0;
+        transition: .2s linear;
+        position: relative;
+        padding: 50px 40px;
+}
+.titel-box h6{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+.content-box{
+    line-height: 1.85;
+    font-weight: 400;
+    font-size: 15px;
+    color: #999;
+}

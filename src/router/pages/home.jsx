@@ -3,7 +3,10 @@ import chu from '../../include/pictures/chu-fes-260-removebg-preview.png';
 import '../../include/Style/Home.css';
 import { Link } from 'react-router-dom'
 import Cards from '../../include/compenent/cards'
-
+import '../../include/Style/anounces.css'
+import Anounces from '../../include/compenent/Anounces'
+import Footer from '../../include/compenent/Footer'
+import Navbar from '../../include/compenent/nabar'
 function Home(props) {
     const [counter, setCounter] = useState(0);
     const picture = useRef();
@@ -38,7 +41,7 @@ function Home(props) {
 
     return (
         <section>
-
+            <Navbar />
             <div className="bg-image">
                 <div className={"box"}>
                     <img src={chu} className="" alt="..." ref={picture}/>
@@ -64,6 +67,8 @@ function Home(props) {
                 </div>
             </div>
             <Cards></Cards>
+            <Anounces/>
+            <Footer></Footer>
         </section>
     );
 }

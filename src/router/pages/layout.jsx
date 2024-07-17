@@ -10,7 +10,6 @@ import Navbar from '../../include/compenent/nabar'
 export default function Layout() {
     return (
         <>
-            <Navbar  />
             <Outlet/>
         </>
     );

@@ -10,12 +10,17 @@
 
 .card:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: #7fb0e5;
 }
-
+.card-titlecss{
+    transition: 0.3s;
+}
+.card:hover .card-titlecss {
+    color: #7fb0e5;
+}
 .card-body {
     padding: 20px;
 }
-
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;

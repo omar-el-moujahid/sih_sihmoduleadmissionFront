@@ -23,7 +23,7 @@ function Cards() {
                     </Link>
                 </div>
                 <div className="col-sm-3 mb-4 ">
-                    <Link to="/admin-login">
+                    <Link to="/chu/patient-login">
                         <div className="card text-center">
                             <div className="card-body">
                                 <FontAwesomeIcon icon={faUsers} size="3x" className="mb-3"/>

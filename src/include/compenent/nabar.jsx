@@ -17,11 +17,9 @@ export default function Navbar() {
 
     const handleScroll = () => {
         if (window.scrollY > 10) {
-            bgcheader.current.classList.add("bgcheader"); ;
-            // setBgColor('#29335c'); // Change to your desired background color
+            bgcheader.current.classList.add("bgcheader");
         } else {
-            bgcheader.current.classList.remove("bgcheader"); ;
-            // setBgColor("#29335c");
+            bgcheader.current.classList.remove("bgcheader");
         }
     };
 
