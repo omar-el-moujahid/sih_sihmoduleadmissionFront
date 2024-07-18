@@ -3,12 +3,40 @@ import '../../include/Style/login.css'
 
 import React, { useRef, useState } from 'react'
 import { Link ,useNavigate } from "react-router-dom";
-
+import axios from 'axios'
 function Login()  {
     const cni=useRef();
     const password=useRef();
     const history = useNavigate();
     const [errors,seterrors]=useState(false);
+    const [whaterrors,setwhaterrors]=useState('');
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     const formData = {
+    //         CNI: cni.current.value,
+    //         password: password.current.value
+    //     };
+    //     try {
+    //         const response = await fetch(`http://localhost:8080/patient/login?CNI=${formData.CNI}&password=${formData.password}`, {
+    //             method: 'GET',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //         });
+    //
+    //         if (!response.ok) {
+    //             seterrors(true)
+    //         }
+    //
+    //         history('/chu/PatientProfil');
+    //         const data = await response.json();
+    //         console.log('Response from server:', data);
+    //
+    //     } catch (error) {
+    //         console.error('Error during login:', error.message);
+    //         // Handle error (display error message, reset form, etc.)
+    //     }
+    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -18,25 +46,27 @@ function Login()  {
         };
 
         try {
-            const response = await fetch(`http://localhost:8080/patient/login?CNI=${formData.CNI}&password=${formData.password}`, {
-                method: 'GET',
+            const response = await axios.get('http://localhost:8080/patient/login', {
+                params: {
+                    CNI: formData.CNI,
+                    password: formData.password
+                },
                 headers: {
                     'Content-Type': 'application/json'
-                },
+                }
             });
 
-            if (!response.ok) {
-                seterrors(true)
-                throw new Error('Network response was not ok');
-            }
-
-            history('/chu/PatientProfil');
-            const data = await response.json();
-            console.log('Response from server:', data);
+            console.log('Response from server:', response.data);
+            history('/PatientProfil');  // Redirect to profile page
 
         } catch (error) {
-            console.error('Error during login:', error.message);
-            // Handle error (display error message, reset form, etc.)
+            seterrors(true);
+            if (error.response) {
+                setwhaterrors(error.response.data.message);
+            } else {
+                setwhaterrors('An unexpected error occurred.');
+            }
+            // console.error('Error during login:', error.message);
         }
     };
 
@@ -68,7 +98,7 @@ function Login()  {
                         Login
                     </button>
                 </div>
-                {errors ?  <p className={"text-danger"}> CNI or Password incorrect</p> : null}
+                {errors ?  <p className={"text-danger"}> {whaterrors} </p> : null}
 
             </form>
             <div className="login">
