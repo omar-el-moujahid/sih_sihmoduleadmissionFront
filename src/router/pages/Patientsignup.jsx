@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import "../../include/Style/signup.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 function PatientSignup() {
@@ -20,6 +20,8 @@ function PatientSignup() {
     const [valide,setvalide]=useState(true);
     const [errorsbackend,seterrorsbackend]=useState({});
     const [customError, setCustomError] = useState(null);
+    const [tologin , settologin]=useState(false);
+    const navigate=useNavigate()
     const handelgendergrnder = (e)=>{
         setGender(e.target.value);
     }
@@ -65,9 +67,11 @@ function PatientSignup() {
                 }
             });
             console.log("Response from server:", response.data);
+            settologin(true);
         }catch (error){
             // seterrorsbackend(error.response.data)
             // console.error(errorsbackend);
+            settologin(false)
             if (error.response && error.response.data) {
                 const errorData = error.response.data;
                 if (errorData.type === "validation") {
@@ -107,8 +111,10 @@ function PatientSignup() {
         console.log(valide);
     };
     useEffect(() => {
-        console.log(accestopaswordconfirm)
-    }, [accestopaswordconfirm])
+        if (tologin) {
+            navigate('/chu/patient-login');
+        }
+    }, [tologin, navigate]);
     return (
         <div className={"body"}>
         <div className="addUser">

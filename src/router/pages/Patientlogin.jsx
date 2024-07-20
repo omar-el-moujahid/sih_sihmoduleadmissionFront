@@ -57,7 +57,7 @@ function Login()  {
             });
 
             console.log('Response from server:', response.data);
-            history('/PatientProfil');  // Redirect to profile page
+            history('/chu/PatientProfil');  // Redirect to profile page
 
         } catch (error) {
             seterrors(true);

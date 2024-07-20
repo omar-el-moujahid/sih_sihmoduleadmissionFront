@@ -1,0 +1,45 @@
+.main {
+    padding-top: 5rem;
+}
+.support-box {
+    background: #fff;
+    border: 1px solid rgba(225, 225, 225, .6);
+    border-radius: 4px;
+    margin: 15px 0;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    position: relative;
+    padding: 50px 40px;
+}
+.support-box-left {
+    background: #fff;
+    border: 1px solid rgba(225, 225, 225, .6);
+    border-radius: 4px;
+    margin: 15px 0;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+    position: relative;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children horizontally */
+    text-align: center; /* Centers text within the card body */
+}
+.sidebar {
+    padding: 0 0 0 30px;
+}
+.profileuser{
+    border-radius: 50%;
+    width: 100px;
+}
+.special-heading-Medicale-hisriry {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #4a90e2;
+    display: inline-block;
+    padding: 0 0 7px;
+    margin: 0 0 -2px;
+}

@@ -7,6 +7,8 @@ import Patientlogin from './pages/Patientlogin'
 import Patientsignup from './pages/Patientsignup'
 import PatientSignup from './pages/Patientsignup'
 import PatientProfil from './pages/PatientProfil'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 export default  function Sih() {
     return (
         <BrowserRouter>
