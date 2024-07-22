@@ -1,0 +1,37 @@
+/* Add to your CSS file */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-message {
+    text-align: center;
+}
+
+.error-code {
+    font-size: 8rem; /* Large font size for the error code */
+    margin-bottom: 1rem;
+}
+
+.error-description {
+    font-size: 2rem; /* Larger font size for the description */
+    margin-bottom: 2rem;
+}
+
+.error-link {
+    font-size: 1.5rem; /* Font size for the link */
+    text-decoration: none;
+    color: #007bff; /* Adjust color if needed */
+}
+
+.error-link:hover {
+    text-decoration: underline;
+}

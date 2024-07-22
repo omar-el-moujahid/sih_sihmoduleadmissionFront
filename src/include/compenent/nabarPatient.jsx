@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import "../Style/patientnavbar.css";
 import logo from '../pictures/chu-fes-260-removebg-preview.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 import user from '../pictures/user.png';
-
+import AuthContext from '../context/Authprovider'
 export default function NavbarPtient() {
     const bgcheader = useRef();
     const [show, setShow] = useState(false);
-
+    const { signOut } = useContext(AuthContext); // Destructure signOut from context
+    const history = useNavigate()
     const handleClick = (e) => {
         e.preventDefault();
         setShow(prevState => !prevState);
@@ -67,7 +68,12 @@ export default function NavbarPtient() {
                     <div className="dropdown-divider"></div>
                 </li>
                 <li>
-                    <a className="dropdown-item" href="logout">
+                    <a className="dropdown-item"  onClick={(e)=>{
+                        e.preventDefault()
+                        signOut(); // Sign out the user
+
+                        history("/chu/patient-login")
+                    }}>
                         <i className="bx bx-power-off me-2"></i>
                         <span className="align-middle">Log Out</span>
                     </a>

@@ -1,4 +1,3 @@
-// src/components/LoginSections.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +11,7 @@ function Cards() {
             <div className="row justify-content-center">
 
                 <div className="col-sm-3 mb-4 ">
-                    <Link to="/admin-login">
+                    <a href="/admin-login">c
                         <div className="card text-center">
                             <div className="card-body">
                                 <FontAwesomeIcon icon={faBriefcase} size="3x" className="mb-3"/>
@@ -20,10 +19,10 @@ function Cards() {
                                 <p className="card-text">Login</p>
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
                 <div className="col-sm-3 mb-4 ">
-                    <Link to="/chu/patient-login">
+                    <a href="/chu/patient-login">
                         <div className="card text-center">
                             <div className="card-body">
                                 <FontAwesomeIcon icon={faUsers} size="3x" className="mb-3"/>
@@ -31,10 +30,10 @@ function Cards() {
                                 <p className="card-text">Login</p>
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
                 <div className="col-sm-3 mb-4 ">
-                    <Link to="/admin-login">
+                    <a href="/admin-login">
                         <div className="card text-center">
                             <div className="card-body">
                                 <FontAwesomeIcon icon={faUserMd} size="3x" className="mb-3"/>
@@ -42,10 +41,8 @@ function Cards() {
                                 <p className="card-text">Login</p>
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
-
-
 
             </div>
         </div>

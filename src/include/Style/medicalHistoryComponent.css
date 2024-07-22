@@ -1,0 +1,25 @@
+.disease-title {
+    color: #2c3e50;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #34495e;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.medicine {
+    color: #16a085;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.notes {
+    color: #e74c3c;
+    font-size: 0.9em;
+    font-style: italic;
+}

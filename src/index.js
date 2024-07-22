@@ -5,10 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import Sih from './router/sih'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { AuthProvider } from './include/context/Authprovider'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Sih />
+      <AuthProvider>
+          <Sih />
+      </AuthProvider>
   </React.StrictMode>
 );
 
