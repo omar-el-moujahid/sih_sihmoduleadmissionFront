@@ -11,7 +11,7 @@ function Cards() {
             <div className="row justify-content-center">
 
                 <div className="col-sm-3 mb-4 ">
-                    <a href="/admin-login">c
+                    <a href="/chu/admin-login">
                         <div className="card text-center">
                             <div className="card-body">
                                 <FontAwesomeIcon icon={faBriefcase} size="3x" className="mb-3"/>
@@ -33,7 +33,7 @@ function Cards() {
                     </a>
                 </div>
                 <div className="col-sm-3 mb-4 ">
-                    <a href="/admin-login">
+                    <a href="/chu/medcine-login">
                         <div className="card text-center">
                             <div className="card-body">
                                 <FontAwesomeIcon icon={faUserMd} size="3x" className="mb-3"/>
