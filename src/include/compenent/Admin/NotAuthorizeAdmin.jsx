@@ -1,7 +1,7 @@
 import React from 'react'
-import "../Style/notAuthorize.css"
+import "../../Style/notAuthorize.css"
 import { Link } from 'react-router-dom'
-function NotAuthorize() {
+function NotAuthorize(props) {
     return (
         <>
 
@@ -10,7 +10,7 @@ function NotAuthorize() {
                     <section className="error-message text-center">
                         <h1 className="error-code">404</h1>
                         <p className="error-description">Page not found</p>
-                        <Link className="nav-link " to={"/chu/patient-login"} > Go to the  Sein In →</Link>
+                        <Link className="nav-link " to={"/chu/admin-login"} > Go to the  Sein In →</Link>
                     </section>
                 </div>
             </div>

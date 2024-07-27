@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../Style/medicalHistoryComponent.css';
-
+import VieMedicaleHistoryModal from './VieMedicaleHistoryModal'
+import AddToTheMedicaleHistoryModal from './AddToTheMedicaleHistoryModal'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Button from 'react-bootstrap/Button'
 const TodaySAppointment = ({ user }) => {
     const [appointments, setAppointments] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -9,8 +13,7 @@ const TodaySAppointment = ({ user }) => {
     const [selectedAppointment, setSelectedAppointment] = useState(null);
     const [errorattend, seterrorattend] = useState(null);
     const [errormissed, setErrormissed] = useState(null);
-
-
+    const [modalShow, setModalShow] = React.useState(false);
     const fetchTodaySAppointment = async () => {
         setError(null);
         try {
@@ -123,14 +126,14 @@ const TodaySAppointment = ({ user }) => {
                     </thead>
                     <tbody>
                     {appointments.map((appointment, index) => (
-                        <tr key={index} onClick={() => handleAppointmentClick(appointment)}>
+                        <tr key={index}>
                             <td>{appointment.cne}</td>
                             <td>{appointment.patientfirstname}</td>
                             <td>{appointment.patientlastname}</td>
                             <td id={appointment.cne}>
 
                                 {
-                                    errorattend || errorattend ?
+                                    errorattend || errormissed ?
                                         <>
                                             <p className={'text-danger text-center'}> erorr product </p>
                                         </>
@@ -159,19 +162,22 @@ const TodaySAppointment = ({ user }) => {
                                 }
                             </td>
                             <td id={appointment.cne}>
-
-                                <button
-                                    className="btn btn-primary me-2"
-                                >
+                                <Button variant="primary" onClick={(e) => {
+                                    e.stopPropagation();
+                                    setModalShow(true)
+                                    setSelectedAppointment(appointment);
+                                }
+                                }
+                                     className={"me-2"}>
                                     View
-                                </button>
-                                <button
-                                    className="btn btn-primary me-2"
-                                >
-                                    Add
-                                </button>
+                                </Button>
 
-
+                                <VieMedicaleHistoryModal className={"ms-2"}
+                                    show={modalShow}
+                                    onHide={() => setModalShow(false)}
+                                                         user={selectedAppointment}
+                                />
+                                <AddToTheMedicaleHistoryModal appointment={appointment} medcine={user.cne} />
                             </td>
                         </tr>
 

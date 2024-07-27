@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Medcinelogin from './pages/Medcinelogin'
 import MedcineProfile from './pages/Medcineprofile'
+import Administration from './pages/Administration'
+import Adminlogin from './pages/Adminlogin'
 export default  function Sih() {
     return (
         <BrowserRouter>
@@ -22,6 +24,8 @@ export default  function Sih() {
                     <Route path="PatientProfil" element={<PatientProfil />} />
                     <Route path="medcine-login" element={<Medcinelogin />} />
                     <Route path="Medcineprofile" element={<MedcineProfile />} />
+                    <Route path="admin-login" element={<Adminlogin />} />
+                    <Route path="Administration" element={<Administration />} />
                 </Route>
             </Routes>
         </BrowserRouter>

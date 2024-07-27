@@ -2,7 +2,7 @@ import '../../include/Style/login.css';
 import React, { useContext, useRef, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
-import AuthContext from '../../include/context/Authprovider';
+import AuthContext from '../../include/context/Authprovider'
 
 function Login() {
     const cni = useRef(null);
@@ -27,7 +27,7 @@ function Login() {
         };
 
         try {
-            const response = await axios.get('http://localhost:8080/doctor/login', {
+            const response = await axios.get('http://localhost:8080/user/login', {
                 params: {
                     CNI: formData.CNI,
                     password: formData.password
@@ -39,7 +39,7 @@ function Login() {
 
             console.log('Response from server:', response.data);
             signIn(response.data);
-            navigate('/chu/Medcineprofile');
+            navigate('/chu/Administration');
         } catch (error) {
             setErrors(true);
             if (error.response) {
@@ -53,7 +53,7 @@ function Login() {
     return (
         <div className="body">
             <div className="addUser">
-                <h3>Sign in <span>/Doctor</span></h3>
+                <h3>Sign in <span>/Admin</span> </h3>
                 <form className="addUserForm" onSubmit={handleSubmit}>
                     <div className="inputGroup">
                         <label htmlFor="email">CNI :</label>

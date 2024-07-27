@@ -1,13 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import '../Style/PatientProfile.css'
-import { Link } from 'react-router-dom'
 import image from '../../include/pictures/user.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import AuthContext from '../context/Authprovider'
 import axios from 'axios'
-import PatientAppointementComponent from './PatientAppointementComponent'
 import TodaySAppointment from './TodaysAppointementComponent'
+import Schedule from './schedule'
 function PatientProfile() {
     const [showchangepassword,setshowchangepassword]=useState(false);
     const { user } = useContext(AuthContext);
@@ -296,6 +293,26 @@ function PatientProfile() {
                             </TodaySAppointment>
                         </div>
                     </div>
+
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="special-heading-Medicale-hisriry ">
+                                <h5 className={'ms-2'}> My schedule
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="row">
+                        <div className="col-md-12">
+                            <Schedule cne={user.cne} departement={user.specialtyDTO}>
+
+                            </Schedule>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </>
