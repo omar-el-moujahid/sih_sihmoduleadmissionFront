@@ -172,6 +172,7 @@ function AddPlanificationForm() {
                                 {specialty.specialtyName}
                             </option>
                         ))}
+
                     </Form.Control>
                     <Form.Control.Feedback type="invalid">
                         {backendErrors.specialtyName || 'Please select a valid specialty.'}

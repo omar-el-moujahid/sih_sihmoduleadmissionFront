@@ -1,0 +1,35 @@
+.contact-bg {
+    background-color: #f8f9fa; /* Light grey background */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-control {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+}

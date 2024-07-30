@@ -6,8 +6,8 @@ import StaffManagement from '../../include/compenent/Admin/StaffManagement'
 import DoctorManagement from '../../include/compenent/Admin/DoctorManagement'
 import PlanningManagement from '../../include/compenent/Admin/PlanningManagement'
 import ResourceManagement from '../../include/compenent/Admin/ResourceManagement'
-import Performances from '../../include/compenent/Admin/Performances'
 import Sidebar from '../../include/compenent/Admin/sidebar'
+import Performances from '../../include/compenent/Admin/Perfarmances/Performances'
 
 
 function Administration(props) {

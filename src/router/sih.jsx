@@ -13,6 +13,9 @@ import Medcinelogin from './pages/Medcinelogin'
 import MedcineProfile from './pages/Medcineprofile'
 import Administration from './pages/Administration'
 import Adminlogin from './pages/Adminlogin'
+import Services from '../include/compenent/Services'
+import About from '../include/compenent/About'
+import Contact from '../include/compenent/Contact'
 export default  function Sih() {
     return (
         <BrowserRouter>
@@ -26,6 +29,9 @@ export default  function Sih() {
                     <Route path="Medcineprofile" element={<MedcineProfile />} />
                     <Route path="admin-login" element={<Adminlogin />} />
                     <Route path="Administration" element={<Administration />} />
+                    <Route path="services" element={<Services />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="Contact" element={<Contact />} />
                 </Route>
             </Routes>
         </BrowserRouter>
